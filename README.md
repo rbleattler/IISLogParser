@@ -1,4 +1,5 @@
 ﻿This library allows the import and parsing of IIS log files from the filesystem to a List <IISLogEvent>. This project arose from the need to have a component that allows both the import of small log files as well as larger files (> 1Gb).
+
 Build with NET Standard 2.0.3, can be used with .Net Framework or .Net Core
 
 ## Processing
