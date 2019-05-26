@@ -16,7 +16,7 @@ The processing engine detects the size of the file to be processed and if it is 
 
 **MaxFileRecord2Read**   [*int*] ->  Controls the maximum limit of items that the <IISLogEvent> List can have. If the number of events in the log file exceeds MaxFileRecord2Read the MissingRecords variable assumes the value of true and we can perform one more reading of a MaxFileRecord2Read set.
 For files less than 50Mb this value has no effect because the engine performs a single read to memory and treats the data from there. 
-For example, if the file has  1.000.000 log events and this is set to 250.000 we will 4 read cycle each one extracting a  List<IISLogEvent> with a count of 250.000
+For example, if the file has  1.000.000 log events and this is set to 250.000, will perform 4 cycle each one extracting a  List<IISLogEvent> with a count of 250.000
 
 
 Usage : 
