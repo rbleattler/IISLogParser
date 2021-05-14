@@ -11,7 +11,7 @@ namespace IISLogParser
         public bool MissingRecords { get; private set; } = true;
         public int MaxFileRecord2Read { get; set; } = 1000000;
         public int CurrentFileRecord { get; private set; }
-        private readonly StreamReader _logfile;
+        //private readonly StreamReader _logfile;
         private string[] _headerFields;
         Hashtable dataStruct = new Hashtable();
         private readonly int _mbSize;
@@ -21,7 +21,6 @@ namespace IISLogParser
             if(File.Exists(filePath))
             {
                 FilePath = filePath;
-                _logfile = new StreamReader(FilePath);
                 _mbSize = (int)new FileInfo(filePath).Length / 1024 / 1024;
             }
             else
@@ -56,16 +55,21 @@ namespace IISLogParser
 
         private IEnumerable<IISLogEvent> LongProcess()
         {
-            string line;
             List<IISLogEvent> events = new List<IISLogEvent>();
             MissingRecords = false;
-            while ((line = _logfile.ReadLine()) != null)
+            using (FileStream fileStream = File.Open(FilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
-                ProcessLine(line, events);
-                if (events?.Count > 0 && events?.Count % MaxFileRecord2Read == 0)
+                using (StreamReader streamReader = new StreamReader(fileStream))
                 {
-                    MissingRecords = true;
-                    break;
+                    while (streamReader.Peek() > -1)
+                    {
+                        ProcessLine(streamReader.ReadLine(), events);
+                        if (events?.Count > 0 && events?.Count % MaxFileRecord2Read == 0)
+                        {
+                            MissingRecords = true;
+                            break;
+                        }
+                    }
                 }
             }
             return events;
@@ -128,9 +132,7 @@ namespace IISLogParser
             }
         }
         public void Dispose()
-        {
-            _logfile?.Close();
-        }
+        {}
     }
 
 }

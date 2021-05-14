@@ -1,9 +1,0 @@
-E:\MyProjects\IISLogParser.NetStandard\IISLogParser\bin\Debug\netstandard2.0\IISLogParser.deps.json
-E:\MyProjects\IISLogParser.NetStandard\IISLogParser\bin\Debug\netstandard2.0\IISLogParser.dll
-E:\MyProjects\IISLogParser.NetStandard\IISLogParser\bin\Debug\netstandard2.0\IISLogParser.pdb
-E:\MyProjects\IISLogParser.NetStandard\IISLogParser\obj\Debug\netstandard2.0\IISLogParser.csprojAssemblyReference.cache
-E:\MyProjects\IISLogParser.NetStandard\IISLogParser\obj\Debug\netstandard2.0\IISLogParser.csproj.CoreCompileInputs.cache
-E:\MyProjects\IISLogParser.NetStandard\IISLogParser\obj\Debug\netstandard2.0\IISLogParser.AssemblyInfoInputs.cache
-E:\MyProjects\IISLogParser.NetStandard\IISLogParser\obj\Debug\netstandard2.0\IISLogParser.AssemblyInfo.cs
-E:\MyProjects\IISLogParser.NetStandard\IISLogParser\obj\Debug\netstandard2.0\IISLogParser.dll
-E:\MyProjects\IISLogParser.NetStandard\IISLogParser\obj\Debug\netstandard2.0\IISLogParser.pdb
