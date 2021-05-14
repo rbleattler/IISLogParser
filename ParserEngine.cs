@@ -44,7 +44,7 @@ namespace IISLogParser
         private IEnumerable<IISLogEvent> QuickProcess()
         {
             List<IISLogEvent> events = new List<IISLogEvent>();
-            var lines = File.ReadAllLines(FilePath);
+            var lines = Utils.ReadAllLines(FilePath);
             foreach (string line in lines)
             {
                 ProcessLine(line, events);
