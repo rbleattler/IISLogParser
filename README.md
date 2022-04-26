@@ -86,10 +86,8 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Kabindas/microsvc.git
+   git clone https://github.com/Kabindas/IISLogParser.git
    ```
-1. Check the databases<br>
-	There are two Sqlite databases that come with the project, they are at <i>microsvc.services/SqLiteDBs</i>
    
 <p align="right">(<a href="#top">back to top</a>)</p>
 
